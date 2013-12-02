@@ -1,0 +1,529 @@
+/* 
+    Document   : login
+    Created on : 29/01/2013, 10:50:56
+    Author     : marcio
+    Description:
+        Purpose of the stylesheet follows.
+*/
+@font-face{
+    font-family: Roboto;
+    src: url("font/Roboto-Regular.eot");
+}
+
+@font-face{
+    font-family: Roboto;
+    src: url("font/Roboto-Regular.ttf");
+}
+
+/* iPhone Portrait (320x480px) */
+/* Others Smartphones Portrait (320x480px) */
+@media screen and (max-width: 320px){
+    body{
+        width       : 320px;
+        font-family : Roboto;
+        margin      : 0;
+        padding     : 0;
+        text-align  : center;
+    }
+    
+    #conteudo{
+        width       : 318px;
+        margin      : 0 auto;
+        text-align  : left;
+        overflow    : hidden;       
+    }
+    
+    .header{
+        width       : 318px;
+        height      : 20px;
+    }
+    
+    .logo{
+        width       : 318px;
+        height      : 120px;
+        overflow    : hidden;
+        text-align  : center;
+        margin      : 0;
+        padding     : 0;
+    }
+    
+    .logo img{
+        width       : 47px;
+        height      : 75px;
+    }
+    
+    .logo p{
+        font-size   : 1em;
+        color       : #08c;
+    }
+    
+    .login{
+        width       : 318px;
+        height      : 260px;
+        overflow-x  : hidden;
+    }
+    
+    .techsec_form #login-error{
+        text-align  : center;
+    }
+    
+    .techsec_form #login-error ul{
+        color       : #d14;
+        font-family : Roboto;
+        font-weight : lighter;
+        display     : inline;
+        font-size   : 0.9em;
+        padding-left: 0;
+        width       : 318px;
+    }
+    
+    .techsec_form #login-error ul li{
+        display     : inline;
+    }
+    
+    .techsec_form label{
+      font-family   : Roboto;
+      font-size     : 0.9em;
+      color         : #08c;
+      margin-left   : 20px;
+      text-align    : left;
+    }
+    
+    .techsec_form input[type="text"]{
+        border      : none;
+        width       : 210px;
+        height      : 15px;
+        font-family : Roboto;
+        font-size   : 0.9em;
+        margin-left : 45px;
+    }
+    
+    .techsec_form input[type="password"]{
+        border      : none;
+        width       : 210px;
+        height      : 15px;
+        font-family : Roboto;
+        font-size   : 0.9em;
+        margin-left : 45px;
+    }
+    
+    .techsec_form button{
+        border      : none;
+        height      : 30px;
+        width       : 220px;
+        background  : #08c;
+        font-family : Roboto;
+        color       : #fff;
+        font-size   : 1em;
+        cursor      : pointer;
+        border      : #999 solid 1px;
+        margin-left : 40px;
+    }
+    
+    .techsec_form .line-write{
+        border-bottom   : #999 solid 1px;
+        border-left     : #999 solid 1px;
+        border-right    : #999 solid 1px;
+        height          : 5px;
+        width           : 220px;
+        margin-top      : -20px;
+        margin-left     : 40px;
+    }
+    
+    #footer{
+        color           : #ccc;
+        font-size       : 0.7em;
+        bottom          : 0;
+        position        : fixed;
+        width           : 318px;
+        height          : 20px;
+        padding-top     : 5px;
+        box-shadow      : 0 0 15px rgba(0,0,0,0.2);
+        text-align      : center;
+        
+    }
+}
+
+/* iPhone Landscape (480x320px) */
+/* Others Smartphones Landscape (480x320px) */
+@media screen and (min-width:321px) and (max-width:480px){
+    body{
+        width       : 480px;
+        height      : 320px;
+        font-family : Roboto;
+        margin      : 0;
+        padding     : 0;
+        text-align  : center;
+        overflow    : hidden;
+    }
+    
+    #conteudo{
+        width       : 460px;
+        margin      : 0 auto;
+        text-align  : left;
+        overflow    : hidden;       
+    }
+    
+    .header{
+        width       : 460px;
+        height      : 15px;
+    }
+    
+    .logo{
+        width       : 230px;
+        height      : 290px;
+        float       : left;
+        overflow    : hidden;
+        text-align  : center;
+        margin      : 0;
+        padding     : 0;
+    }
+    
+    .logo img{
+        width       : 71px;
+        height      : 113px;
+    }
+    
+    .logo p{
+        font-size   : 1.5em;
+        color       : #08c;
+    }
+    
+    .login{
+        width       : 230px;
+        height      : 290px;
+        float       : left;
+    }
+    
+    .techsec_form #login-error ul{
+        color       : #d14;
+        font-family : Roboto;
+        font-weight : lighter;
+        display     : inline;
+        font-size   : 0.8em;
+        padding-left: 0;
+        width       : 230px;
+    }
+    
+    .techsec_form #login-error ul li{
+        display     : inline;
+    }
+    
+    .techsec_form label{
+      font-family   : Roboto;
+      font-size     : 0.9em;
+      color         : #08c;
+    }
+    
+    .techsec_form input[type="text"]{
+        border      : none;
+        width       : 180px;
+        height      : 21px;
+        font-family : Roboto;
+        font-size   : 0.9em;
+        margin-left : 10px;
+    }
+    
+    .techsec_form input[type="password"]{
+        border      : none;
+        width       : 180px;
+        height      : 21px;
+        font-family : Roboto;
+        font-size   : 0.9em;
+        margin-left : 10px;
+    }
+    
+    .techsec_form button{
+        border      : none;
+        height      : 25px;
+        width       : 200px;
+        background  : #08c;
+        font-family : Roboto;
+        color       : #fff;
+        font-size   : 1em;
+        cursor      : pointer;
+        border      : #999 solid 1px;
+    }
+    
+    .techsec_form .line-write{
+        border-bottom   : #999 solid 1px;
+        border-left     : #999 solid 1px;
+        border-right    : #999 solid 1px;
+        height          : 5px;
+        width           : 200px;
+        margin-top      : -20px;
+        
+    }
+    
+    #footer{
+        color           : #999;
+        font-size       : 0.8em;
+        bottom          : 0;
+        position        : fixed;
+        float           : right;
+        padding-left    : 10px;
+        width           : 100%;
+        height          : 20px;
+        padding-top     : 5px;
+        box-shadow      : 0 0 15px rgba(0,0,0,0.2);
+    }
+}
+
+
+/* iPad Portrait (600x800px) */
+/* iPhone Retina Portrait (640x960px) */
+/* iPad2 Portrait (768x1024px) */
+@media screen and (min-width:481px) and (max-width: 768px){
+    body{
+        width       : 768px;
+        font-family : Roboto;
+        margin      : 0;
+        padding     : 0;
+        text-align  : center;
+        
+    }
+    
+    #conteudo{
+        width       : 590px;
+        margin      : 0 auto;
+        text-align  : left;
+        overflow    : hidden;       
+    }
+    
+    .header{
+        width       : 590px;
+        height      : 50px;
+    }
+    
+    .logo{
+        width       : 590px;
+        height      : 200px;
+        overflow    : hidden;
+        text-align  : center;
+        margin      : 0;
+        padding     : 0;
+    }
+    
+    .logo img{
+        width       : 71px;
+        height      : 113px;
+    }
+    
+    .logo p{
+        font-size   : 2em;
+        color       : #08c;        
+    }
+    
+    .login{
+        width       : 590px;
+        height      : 340px;
+        overflow-x  : hidden;
+    }
+    
+    .techsec_form #login-error{
+        text-align  : center;
+    }
+    
+    .techsec_form #login-error ul{
+        color       : #d14;
+        font-family : Roboto;
+        font-weight : lighter;
+        display     : inline;
+        font-size   : 1em;
+        padding-left: 0;
+        width       : 590px;
+    }
+    
+    .techsec_form #login-error ul li{
+        display     : inline;
+    }
+    
+    .techsec_form label{
+      font-family   : Roboto;
+      font-size     : 1em;
+      color         : #08c;
+      margin-left   : 70px;
+      text-align    : left;
+    }
+    
+    .techsec_form input[type="text"]{
+        border      : none;
+        width       : 310px;
+        height      : 31px;
+        font-family : Roboto;
+        font-size   : 1em;
+        margin-left : 145px;
+    }
+    
+    .techsec_form input[type="password"]{
+        border      : none;
+        width       : 310px;
+        height      : 31px;
+        font-family : Roboto;
+        font-size   : 1em;
+        margin-left : 145px;
+    }
+    
+    .techsec_form button{
+        border      : none;
+        height      : 30px;
+        width       : 320px;
+        background  : #08c;
+        font-family : Roboto;
+        color       : #fff;
+        font-size   : 1em;
+        cursor      : pointer;
+        border      : #999 solid 1px;
+        margin-left : 140px;
+    }
+    
+    .techsec_form .line-write{
+        border-bottom   : #999 solid 1px;
+        border-left     : #999 solid 1px;
+        border-right    : #999 solid 1px;
+        height          : 5px;
+        width           : 320px;
+        margin-top      : -20px;
+        margin-left     : 140px;
+    }
+    
+    #footer{
+        color           : #ccc;
+        font-size       : 0.8em;
+        bottom          : 0;
+        position        : fixed;
+        width           : 100%;
+        height          : 20px;
+        padding-top     : 5px;
+        box-shadow      : 0 0 15px rgba(0,0,0,0.2);
+        text-align      : center;
+        
+        
+    }
+}
+
+/* iPad Landscape (800x600px) */
+/* iPhone Retina Landscape (960x640px) */
+/* iPad2 Landscape (1024x768px) */
+@media screen and (min-width:769px) {
+    body{
+        width       : 1024px;
+        height      : 768px;
+        font-family : Roboto;
+        margin      : 0;
+        padding     : 0;
+        text-align  : center;
+        overflow    : hidden;
+    }
+    
+    #conteudo{
+        width       : 790px;
+        margin      : 0 auto;
+        text-align  : left;
+        overflow    : hidden;       
+    }
+    
+    .header{
+        width       : 790px;
+        height      : 50px;
+    }
+    
+    .logo{
+        width       : 395px;
+        height      : 290px;
+        float       : left;
+        overflow    : hidden;
+        text-align  : center;
+        margin      : 0;
+        padding     : 0;
+    }
+    
+    .logo img{
+        width       : 94px;
+        height      : 150px;
+    }
+    
+    .logo p{
+        font-size   : 2em;
+        color       : #08c;
+    }
+    
+    .login{
+        width       : 395px;
+        height      : 290px;
+        float       : left;
+    }
+    
+    .techsec_form #login-error ul{
+        color       : #d14;
+        font-family : Roboto;
+        font-weight : lighter;
+        display     : inline;
+        font-size   : 1em;
+        padding-left: 0;
+        width       : 395px;
+    }
+    
+    .techsec_form #login-error ul li{
+        display     : inline;
+    }
+    
+    .techsec_form label{
+      font-family   : Roboto;
+      font-size     : 1.1em;
+      color         : #08c;
+    }
+    
+    .techsec_form input[type="text"]{
+        border      : none;
+        width       : 380px;
+        height      : 30px;
+        font-family : Roboto;
+        font-size   : 1.1em;
+        margin-left : 10px;
+    }
+    
+    .techsec_form input[type="password"]{
+        border      : none;
+        width       : 380px;
+        height      : 30px;
+        font-family : Roboto;
+        font-size   : 1.1em;
+        margin-left : 10px;
+    }
+    
+    .techsec_form button{
+        border      : none;
+        height      : 25px;
+        width       : 390px;
+        background  : #08c;
+        font-family : Roboto;
+        color       : #fff;
+        font-size   : 1.1em;
+        cursor      : pointer;
+        border      : #999 solid 1px;
+    }
+    
+    .techsec_form .line-write{
+        border-bottom   : #999 solid 1px;
+        border-left     : #999 solid 1px;
+        border-right    : #999 solid 1px;
+        height          : 5px;
+        width           : 390px;
+        margin-top      : -20px;
+        
+    }
+    
+    #footer{
+        color           : #999;
+        font-size       : 0.8em;
+        bottom          : 0;
+        position        : fixed;
+        float           : right;
+        padding-left    : 10px;
+        width           : 100%;
+        height          : 20px;
+        padding-top     : 5px;
+        box-shadow      : 0 0 15px rgba(0,0,0,0.2);
+    }
+}

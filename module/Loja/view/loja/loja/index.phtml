@@ -1,0 +1,32 @@
+<?php
+//Modulo de Loja
+
+$title = 'Minhas Lojas';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<p>
+    <a href="<?php echo $this->url('loja', array('action' => 'add')); ?>">Adicionar uma loja</a>
+</p>
+
+<table>
+    <tr>
+        <td width='300'>Titulo</td>
+        <td width='400'>Endereço</td>
+        <td></td>
+    </tr>
+    <?php
+    foreach ($lojas as $loja):
+        ?>
+        <tr>
+            <td><?php echo $loja->getTitle(); ?></td>
+            <td><?php echo $loja->getAddress(); ?></td>
+            <td>
+                <a href="<?php echo $this->url('loja', array('action' => 'edit', 'id' => $loja->getId()));
+        ?>">Edit</a>
+                <a href="<?php echo $this->url('loja', array('action' => 'delete', 'id' => $loja->getId()));
+        ?>">Delete</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>

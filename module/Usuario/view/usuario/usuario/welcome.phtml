@@ -1,0 +1,7 @@
+<h1>Bem vindo(a) <?php echo $_SESSION['base']['usuario']->getNome_completo(); ?> </h1> 
+<a href="<?php echo $this->url('usuario', array('action' => 'logout'));
+?>">Logout</a>
+
+<pre>
+<?php print_r( $_SESSION['base']['usuario'] ); ?>
+</pre>

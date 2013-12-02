@@ -1,0 +1,52 @@
+<?php
+// module/Album/view/album/album/add.phtml:
+
+$title = 'Add new album';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<?php
+//Simplificado....
+//echo $this->form()->openTag($form);
+//echo $this->formCollection($form);
+//echo $this->form()->closeTag();
+
+/*
+ * Similar Code.. */
+$form->setAttribute('action', $this->url('album', array('action' => 'add')));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+echo $this->formHidden($form->get('id'));
+echo $this->formRow($form->get('title'));
+echo $this->formRow($form->get('lojas_id'));
+echo $this->formRow($form->get('artist'));
+echo $this->formSubmit($form->get('submit'));
+echo $this->form()->closeTag();
+?>
+
+<div id='detalhesLoja'>
+</div>
+
+<script>
+
+    function ajaxTest(){
+        var value = document.getElementById('lojas_id').value;
+
+        $.ajax({
+            type: "POST",
+            url: "http://localhost/zf2-tutorial/public/usuario/sessiondata",
+            cache: false,
+            data: { idLoja: value}
+        })
+        .done(function( html ) {
+            var jsonResponse = html;
+            var str = "Identificador: " + jsonResponse.id + "<br>" +
+                         "Titulo: " + jsonResponse.title + "<br>" +
+                         "Endereço: " + jsonResponse.address + "<br><br>";
+            $("#detalhesLoja").empty();
+            $("#detalhesLoja").append(str);
+        });
+    }
+
+</script>
